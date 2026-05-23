@@ -1,0 +1,174 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  name      String
+  role      Role     @default(ADMIN)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Role { ADMIN EDITOR }
+
+model Quote {
+  id             Int      @id @default(autoincrement())
+  quoteNumber    String   @unique
+  fullName       String
+  email          String
+  phone          String
+  language       String   @default("fr")
+  serviceType    ServiceType
+  pickupLocation String?
+  dropLocation   String?
+  duration       String?
+  excursionId    Int?
+  excursion      Excursion? @relation(fields: [excursionId], references: [id])
+  activityId     Int?
+  activity       Activity?  @relation(fields: [activityId], references: [id])
+  date           DateTime
+  time           String?
+  adults         Int      @default(1)
+  children       Int      @default(0)
+  babies         Int      @default(0)
+  vehicleType    String?
+  message        String?  @db.Text
+  status         QuoteStatus @default(PENDING)
+  adminPrice     Float?
+  adminCurrency  String?  @default("MAD")
+  adminNote      String?  @db.Text
+  sentAt         DateTime?
+  confirmedAt    DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+enum ServiceType { TRANSFER DISPOSITION EXCURSION ACTIVITY }
+enum QuoteStatus { PENDING QUOTED CONFIRMED COMPLETED CANCELLED }
+
+model Excursion {
+  id            Int      @id @default(autoincrement())
+  slug          String   @unique
+  titleFr       String
+  titleEn       String?
+  titleEs       String?
+  descriptionFr String   @db.Text
+  descriptionEn String?  @db.Text
+  descriptionEs String?  @db.Text
+  duration      String
+  departure     String   @default("Marrakech")
+  priceMad      Float
+  priceEur      Float?
+  priceUsd      Float?
+  image         String
+  gallery       String?  @db.Text
+  tag           String?
+  featured      Boolean  @default(false)
+  badges        String?  @db.Text
+  programFr     String?  @db.Text
+  programEn     String?  @db.Text
+  programEs     String?  @db.Text
+  active        Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  quotes        Quote[]
+}
+
+model Activity {
+  id            Int      @id @default(autoincrement())
+  slug          String   @unique
+  titleFr       String
+  titleEn       String?
+  titleEs       String?
+  descriptionFr String   @db.Text
+  descriptionEn String?  @db.Text
+  descriptionEs String?  @db.Text
+  category      String
+  duration      String
+  priceMad      Float
+  priceEur      Float?
+  priceUsd      Float?
+  image         String
+  featured      Boolean  @default(false)
+  active        Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  quotes        Quote[]
+}
+
+model TransferRoute {
+  id         Int      @id @default(autoincrement())
+  fromLoc    String
+  toLoc      String
+  duration   String
+  priceMad   Float
+  priceEur   Float?
+  priceUsd   Float?
+  active     Boolean  @default(true)
+  createdAt  DateTime @default(now())
+}
+
+model Vehicle {
+  id              Int      @id @default(autoincrement())
+  name            String
+  type            String
+  capacity        Int
+  pricePerDayMad  Float    @default(0)
+  pricePerDayEur  Float?
+  image           String
+  features        String?  @db.Text
+  active          Boolean  @default(true)
+  createdAt       DateTime @default(now())
+}
+
+model Testimonial {
+  id        Int      @id @default(autoincrement())
+  name      String
+  country   String
+  flag      String?
+  rating    Int      @default(5)
+  comment   String   @db.Text
+  language  String?  @default("fr")
+  avatar    String?
+  active    Boolean  @default(true)
+  featured  Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Gallery {
+  id        Int      @id @default(autoincrement())
+  title     String?
+  image     String
+  category  String?
+  ord       Int      @default(0)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
+
+model Contact {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  phone     String?
+  service   String?
+  date      DateTime?
+  persons   Int?
+  message   String   @db.Text
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Setting {
+  id        Int      @id @default(autoincrement())
+  keyName   String   @unique
+  value     String   @db.Text
+  updatedAt DateTime @updatedAt
+}

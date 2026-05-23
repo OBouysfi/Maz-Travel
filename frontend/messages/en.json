@@ -1,0 +1,88 @@
+{
+  "nav": { "home":"Home","transfers":"Transfers","excursions":"Excursions","activities":"Activities","disposition":"Chauffeur","about":"About","contact":"Contact","book":"Book" },
+  "hero": {
+    "badge":"Available 24/7 — Quote in 15 min",
+    "title1":"Your ride in Morocco,","title2":"booked in","titleAccent":"30 seconds",
+    "subtitle":"Fixed price. Professional drivers. 24/7 availability.",
+    "trustPrice":"Fixed price","trustPayment":"Flexible payment","trustSupport":"24/7 service"
+  },
+  "booking": {
+    "tabTransfer":"Transfer","tabDisposition":"Chauffeur service",
+    "pickup":"Airport, station, hotel...","dropoff":"Hotel, address or place","location":"Pickup location",
+    "date":"Date","time":"Time","duration":"Duration",
+    "durations":{ "half":"Half-day (4h)","full":"Full day (8h)","multi":"Several days" },
+    "search":"Find a driver","swap":"Swap",
+    "fullName":"Full name","email":"Email","phone":"Phone","message":"Message (optional)",
+    "adults":"Adults","children":"Children (-12)","babies":"Babies (-3)",
+    "submit":"Request quote",
+    "success":"Request sent! Quote number:",
+    "successMsg":"We'll get back to you within 15 minutes by email with your personalized quote.",
+    "error":"An error occurred. Please try again.",
+    "stepDetails":"Your details","stepConfirm":"Confirmation"
+  },
+  "services": {
+    "tagline":"OUR SERVICES","title":"What are you looking for?","subtitle":"Everything you need to explore Morocco",
+    "transfers":"Transfers","transfersDesc":"Airport, city, intercity — 24/7.",
+    "excursions":"Excursions","excursionsDesc":"Desert, mountains, ocean.",
+    "activities":"Activities","activitiesDesc":"Quad, camel, hot air balloon.",
+    "disposition":"Chauffeur service","dispositionDesc":"Vehicle + private driver.",
+    "from":"From"
+  },
+  "excursionsPage": {
+    "title":"Marrakech Excursions","subtitle":"Departing from Marrakech",
+    "searchTitle":"Find your excursion","selectExcursion":"Select excursion","allExcursions":"All excursions",
+    "search":"Search",
+    "filterPrice":"Price","min":"min","max":"max","sortBy":"Sort by","ok":"OK",
+    "sortRelevance":"Relevance","sortPriceAsc":"Price low to high","sortPriceDesc":"Price high to low","sortDuration":"Duration",
+    "details":"Details","day":"Day","days":"Days","freeCancellation":"Free cancellation",
+    "contactUs":"Contact us","noResults":"No excursions found"
+  },
+  "activitiesPage": {
+    "title":"Tourist activities","subtitle":"Experience Morocco to the fullest",
+    "all":"All","marrakech":"Marrakech","agafay":"Agafay","other":"Others"
+  },
+  "transfersPage": {
+    "title":"Private transfers","subtitle":"On-time and comfortable, 24/7",
+    "mostRequested":"Most requested routes","fleet":"Our fleet","book":"Book"
+  },
+  "dispositionPage": {
+    "title":"Chauffeur service","subtitle":"Vehicle with driver — tailor-made",
+    "durations":"Available durations","uses":"For all your trips",
+    "halfDay":"Half-day","fullDay":"Full day","multiDay":"Several days",
+    "tourism":"Tourism","business":"Business","events":"Events","private":"Private"
+  },
+  "stats": { "clients":"Happy clients","destinations":"Destinations","years":"Years of experience","support":"Customer support" },
+  "excursions": { "tagline":"DESTINATIONS","title":"Popular excursions","viewAll":"View all excursions" },
+  "testimonials": { "tagline":"TESTIMONIALS","title":"Trusted by travelers","subtitle":"Over 5000 happy travelers" },
+  "gallery": { "tagline":"GALLERY","title":"Morocco in pictures" },
+  "faq": {
+    "tagline":"FAQ","title":"Frequently asked questions",
+    "q1":"How do I book?","a1":"Fill our online form, WhatsApp or phone. Confirmation in 15 min.",
+    "q2":"What vehicles?","a2":"Mercedes sedans, Toyota Land Cruiser SUVs, Sprinter and Vito minibuses.",
+    "q3":"Multiple languages?","a3":"Yes — French, English, Spanish, Arabic and Berber.",
+    "q4":"Online payment?","a4":"Secure online deposit or on-site cash/card.",
+    "q5":"Cancellation?","a5":"Free cancellation up to 24h before departure."
+  },
+  "cta": { "title":"Ready for your Moroccan adventure?","subtitle":"Free quote in under 15 minutes.","button":"Get my quote","whatsapp":"WhatsApp" },
+  "footer": {
+    "tagline":"Premium local tourist transport agency based in Marrakech.",
+    "services":"Services","company":"Company","contact":"Contact","follow":"Follow us","rights":"All rights reserved.",
+    "newsletter":"Newsletter","newsletterPlaceholder":"Your email","subscribe":"Subscribe"
+  },
+  "contact": {
+    "title":"Contact us","subtitle":"Our team responds within 15 minutes",
+    "name":"Full name","phone":"Phone","email":"Email","service":"Service","date":"Date","persons":"People","message":"Message","send":"Send",
+    "success":"Message sent!","error":"Error.",
+    "infoTitle":"Information","address":"Address","phoneLabel":"Phone","emailLabel":"Email","hours":"Availability","hoursValue":"Mon - Sun : 24/7"
+  },
+  "about": {
+    "tagline":"ABOUT","title":"Local expertise at your service",
+    "intro":"Maz Travel is a local agency based in Marrakech, specialized in private tourist transport, airport transfers, custom excursions and tourist activities throughout Morocco.",
+    "story":"Our story","storyText":"For over 10 years we've been guiding travelers in their discovery of Morocco.",
+    "values":"Our values",
+    "ponctuality":"Punctuality","ponctualityDesc":"On time, always.",
+    "comfort":"Comfort","comfortDesc":"Recent, air-conditioned vehicles.",
+    "safety":"Safety","safetyDesc":"Experienced and licensed drivers.",
+    "service":"Service","serviceDesc":"Multilingual, 24/7."
+  }
+}

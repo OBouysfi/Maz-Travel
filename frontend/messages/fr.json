@@ -1,0 +1,90 @@
+{
+  "nav": { "home":"Accueil","transfers":"Transferts","excursions":"Excursions","activities":"Activités","disposition":"Mise à disposition","about":"À propos","contact":"Contact","book":"Réserver" },
+  "hero": {
+    "badge":"Disponible 24h/24 — Devis en 15 min",
+    "title1":"Votre trajet au Maroc,",
+    "title2":"réservé en",
+    "titleAccent":"30 secondes",
+    "subtitle":"Prix transparent. Chauffeurs professionnels. Disponibilité 24/7.",
+    "trustPrice":"Prix fixe garanti","trustPayment":"Paiement flexible","trustSupport":"Service 24/7"
+  },
+  "booking": {
+    "tabTransfer":"Transfert","tabDisposition":"Mise à disposition",
+    "pickup":"Aéroport, gare, hôtel...","dropoff":"Hôtel, adresse ou lieu","location":"Lieu de prise en charge",
+    "date":"Date","time":"Heure","duration":"Durée",
+    "durations":{ "half":"Demi-journée (4h)","full":"Journée complète (8h)","multi":"Plusieurs jours" },
+    "search":"Rechercher un chauffeur","swap":"Inverser",
+    "fullName":"Nom complet","email":"Email","phone":"Téléphone","message":"Message (optionnel)",
+    "adults":"Adultes","children":"Enfants (-12)","babies":"Bébés (-3)",
+    "submit":"Demander un devis",
+    "success":"Demande envoyée ! Numéro de devis :",
+    "successMsg":"Nous vous recontactons sous 15 minutes par email avec votre devis personnalisé.",
+    "error":"Une erreur est survenue. Veuillez réessayer.",
+    "stepDetails":"Vos coordonnées","stepConfirm":"Confirmation"
+  },
+  "services": {
+    "tagline":"NOS SERVICES","title":"Que cherchez-vous ?","subtitle":"Tout ce dont vous avez besoin pour explorer le Maroc",
+    "transfers":"Transferts","transfersDesc":"Aéroport, ville, intercity — 24/7.",
+    "excursions":"Excursions","excursionsDesc":"Désert, montagnes, océan.",
+    "activities":"Activités","activitiesDesc":"Quad, chameau, montgolfière.",
+    "disposition":"Mise à disposition","dispositionDesc":"Véhicule + chauffeur privé.",
+    "from":"Dès"
+  },
+  "excursionsPage": {
+    "title":"Excursions Marrakech","subtitle":"Au départ de Marrakech",
+    "searchTitle":"Rechercher votre excursion","selectExcursion":"Sélectionnez excursion","allExcursions":"Toutes les excursions",
+    "search":"Rechercher",
+    "filterPrice":"Prix","min":"min","max":"max","sortBy":"Trier par","ok":"OK",
+    "sortRelevance":"Pertinence","sortPriceAsc":"Prix croissant","sortPriceDesc":"Prix décroissant","sortDuration":"Durée",
+    "details":"Détails","day":"Jour","days":"Jours","freeCancellation":"Annulation gratuite",
+    "contactUs":"Contactez-nous","noResults":"Aucune excursion trouvée"
+  },
+  "activitiesPage": {
+    "title":"Activités touristiques","subtitle":"Vivez le Maroc à fond",
+    "all":"Toutes","marrakech":"Marrakech","agafay":"Agafay","other":"Autres"
+  },
+  "transfersPage": {
+    "title":"Transferts privés","subtitle":"Service ponctuel et confortable, 24/7",
+    "mostRequested":"Trajets les plus demandés","fleet":"Notre flotte","book":"Réserver"
+  },
+  "dispositionPage": {
+    "title":"Mise à disposition","subtitle":"Véhicule avec chauffeur — sur mesure",
+    "durations":"Durées disponibles","uses":"Pour tous vos déplacements",
+    "halfDay":"Demi-journée","fullDay":"Journée complète","multiDay":"Plusieurs jours",
+    "tourism":"Tourisme","business":"Business","events":"Événements","private":"Privé"
+  },
+  "stats": { "clients":"Clients satisfaits","destinations":"Destinations","years":"Années d'expérience","support":"Support client" },
+  "excursions": { "tagline":"DESTINATIONS","title":"Excursions populaires","viewAll":"Voir toutes les excursions" },
+  "testimonials": { "tagline":"TÉMOIGNAGES","title":"Ils nous font confiance","subtitle":"Plus de 5000 voyageurs heureux" },
+  "gallery": { "tagline":"GALERIE","title":"Le Maroc en images" },
+  "faq": {
+    "tagline":"FAQ","title":"Questions fréquentes",
+    "q1":"Comment réserver ?","a1":"Remplissez notre formulaire en ligne, par WhatsApp ou téléphone. Confirmation sous 15 minutes.",
+    "q2":"Quels véhicules ?","a2":"Berlines Mercedes, SUV Toyota Land Cruiser, minibus Sprinter — climatisés et entretenus.",
+    "q3":"Vos chauffeurs parlent-ils plusieurs langues ?","a3":"Oui — français, anglais, espagnol, arabe et berbère.",
+    "q4":"Paiement en ligne ?","a4":"Acompte en ligne sécurisé ou paiement sur place.",
+    "q5":"Annulation ?","a5":"Annulation gratuite jusqu'à 24h avant le départ."
+  },
+  "cta": { "title":"Prêt pour votre aventure au Maroc ?","subtitle":"Devis gratuit en moins de 15 minutes.","button":"Obtenir mon devis","whatsapp":"WhatsApp" },
+  "footer": {
+    "tagline":"Agence locale de transport touristique premium basée à Marrakech.",
+    "services":"Services","company":"Société","contact":"Contact","follow":"Suivez-nous","rights":"Tous droits réservés.",
+    "newsletter":"Newsletter","newsletterPlaceholder":"Votre email","subscribe":"S'inscrire"
+  },
+  "contact": {
+    "title":"Contactez-nous","subtitle":"Notre équipe répond sous 15 minutes",
+    "name":"Nom complet","phone":"Téléphone","email":"Email","service":"Service","date":"Date","persons":"Personnes","message":"Message","send":"Envoyer",
+    "success":"Message envoyé !","error":"Erreur.",
+    "infoTitle":"Informations","address":"Adresse","phoneLabel":"Téléphone","emailLabel":"Email","hours":"Disponibilité","hoursValue":"Lun - Dim : 24h/24"
+  },
+  "about": {
+    "tagline":"À PROPOS","title":"L'expertise locale à votre service",
+    "intro":"Maz Travel est une agence locale basée à Marrakech, spécialisée dans le transport touristique privé, transferts aéroport, excursions sur mesure et activités touristiques partout au Maroc.",
+    "story":"Notre histoire","storyText":"Depuis plus de 10 ans, nous accompagnons les voyageurs dans la découverte du Maroc.",
+    "values":"Nos valeurs",
+    "ponctuality":"Ponctualité","ponctualityDesc":"À l'heure, toujours.",
+    "comfort":"Confort","comfortDesc":"Véhicules récents, climatisés.",
+    "safety":"Sécurité","safetyDesc":"Chauffeurs expérimentés et licenciés.",
+    "service":"Service","serviceDesc":"Multilingue, 24/7."
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "nav": { "home":"Inicio","transfers":"Traslados","excursions":"Excursiones","activities":"Actividades","disposition":"Chófer","about":"Acerca","contact":"Contacto","book":"Reservar" },
+  "hero": {
+    "badge":"Disponible 24/7 — Presupuesto en 15 min",
+    "title1":"Tu viaje en Marruecos,","title2":"reservado en","titleAccent":"30 segundos",
+    "subtitle":"Precio fijo. Conductores profesionales. Disponibilidad 24/7.",
+    "trustPrice":"Precio fijo","trustPayment":"Pago flexible","trustSupport":"Servicio 24/7"
+  },
+  "booking": {
+    "tabTransfer":"Traslado","tabDisposition":"Chófer privado",
+    "pickup":"Aeropuerto, estación, hotel...","dropoff":"Hotel, dirección o lugar","location":"Lugar de recogida",
+    "date":"Fecha","time":"Hora","duration":"Duración",
+    "durations":{ "half":"Medio día (4h)","full":"Día completo (8h)","multi":"Varios días" },
+    "search":"Buscar chófer","swap":"Invertir",
+    "fullName":"Nombre completo","email":"Email","phone":"Teléfono","message":"Mensaje (opcional)",
+    "adults":"Adultos","children":"Niños (-12)","babies":"Bebés (-3)",
+    "submit":"Solicitar presupuesto",
+    "success":"¡Solicitud enviada! Número de presupuesto:",
+    "successMsg":"Te responderemos en 15 minutos por email con tu presupuesto personalizado.",
+    "error":"Ha ocurrido un error.",
+    "stepDetails":"Tus datos","stepConfirm":"Confirmación"
+  },
+  "services": {
+    "tagline":"NUESTROS SERVICIOS","title":"¿Qué buscas?","subtitle":"Todo lo necesario para explorar Marruecos",
+    "transfers":"Traslados","transfersDesc":"Aeropuerto, ciudad, interurbanos — 24/7.",
+    "excursions":"Excursiones","excursionsDesc":"Desierto, montañas, océano.",
+    "activities":"Actividades","activitiesDesc":"Quad, camello, globo.",
+    "disposition":"Chófer privado","dispositionDesc":"Vehículo + conductor.",
+    "from":"Desde"
+  },
+  "excursionsPage": {
+    "title":"Excursiones Marrakech","subtitle":"Salida desde Marrakech",
+    "searchTitle":"Busca tu excursión","selectExcursion":"Selecciona excursión","allExcursions":"Todas las excursiones",
+    "search":"Buscar",
+    "filterPrice":"Precio","min":"min","max":"max","sortBy":"Ordenar","ok":"OK",
+    "sortRelevance":"Relevancia","sortPriceAsc":"Precio ascendente","sortPriceDesc":"Precio descendente","sortDuration":"Duración",
+    "details":"Detalles","day":"Día","days":"Días","freeCancellation":"Cancelación gratuita",
+    "contactUs":"Contáctanos","noResults":"No se encontraron excursiones"
+  },
+  "activitiesPage": {
+    "title":"Actividades turísticas","subtitle":"Vive Marruecos al máximo",
+    "all":"Todas","marrakech":"Marrakech","agafay":"Agafay","other":"Otras"
+  },
+  "transfersPage": {
+    "title":"Traslados privados","subtitle":"Puntual y cómodo, 24/7",
+    "mostRequested":"Rutas más solicitadas","fleet":"Nuestra flota","book":"Reservar"
+  },
+  "dispositionPage": {
+    "title":"Chófer privado","subtitle":"Vehículo con conductor — a medida",
+    "durations":"Duraciones","uses":"Para todos tus viajes",
+    "halfDay":"Medio día","fullDay":"Día completo","multiDay":"Varios días",
+    "tourism":"Turismo","business":"Negocios","events":"Eventos","private":"Privado"
+  },
+  "stats": { "clients":"Clientes felices","destinations":"Destinos","years":"Años de experiencia","support":"Atención al cliente" },
+  "excursions": { "tagline":"DESTINOS","title":"Excursiones populares","viewAll":"Ver todas las excursiones" },
+  "testimonials": { "tagline":"TESTIMONIOS","title":"Confían en nosotros","subtitle":"Más de 5000 viajeros felices" },
+  "gallery": { "tagline":"GALERÍA","title":"Marruecos en imágenes" },
+  "faq": {
+    "tagline":"FAQ","title":"Preguntas frecuentes",
+    "q1":"¿Cómo reservar?","a1":"Completa el formulario, WhatsApp o teléfono. Confirmación en 15 min.",
+    "q2":"¿Qué vehículos?","a2":"Sedanes Mercedes, SUV Toyota Land Cruiser, minibuses Sprinter.",
+    "q3":"¿Varios idiomas?","a3":"Sí — francés, inglés, español, árabe y bereber.",
+    "q4":"¿Pago en línea?","a4":"Depósito en línea o pago en sitio.",
+    "q5":"¿Cancelación?","a5":"Cancelación gratuita hasta 24h antes."
+  },
+  "cta": { "title":"¿Listo para tu aventura?","subtitle":"Presupuesto gratis en menos de 15 minutos.","button":"Obtener mi presupuesto","whatsapp":"WhatsApp" },
+  "footer": {
+    "tagline":"Agencia local premium en Marrakech.",
+    "services":"Servicios","company":"Empresa","contact":"Contacto","follow":"Síguenos","rights":"Todos los derechos reservados.",
+    "newsletter":"Newsletter","newsletterPlaceholder":"Tu email","subscribe":"Suscribirse"
+  },
+  "contact": {
+    "title":"Contáctanos","subtitle":"Respondemos en 15 minutos",
+    "name":"Nombre completo","phone":"Teléfono","email":"Email","service":"Servicio","date":"Fecha","persons":"Personas","message":"Mensaje","send":"Enviar",
+    "success":"¡Mensaje enviado!","error":"Error.",
+    "infoTitle":"Información","address":"Dirección","phoneLabel":"Teléfono","emailLabel":"Email","hours":"Disponibilidad","hoursValue":"Lun - Dom : 24h/24"
+  },
+  "about": {
+    "tagline":"ACERCA","title":"Experiencia local a tu servicio",
+    "intro":"Maz Travel es una agencia local en Marrakech, especializada en transporte turístico privado, traslados al aeropuerto, excursiones a medida y actividades turísticas.",
+    "story":"Nuestra historia","storyText":"Desde hace más de 10 años acompañamos a los viajeros.",
+    "values":"Nuestros valores",
+    "ponctuality":"Puntualidad","ponctualityDesc":"A tiempo, siempre.",
+    "comfort":"Comodidad","comfortDesc":"Vehículos recientes.",
+    "safety":"Seguridad","safetyDesc":"Conductores experimentados.",
+    "service":"Servicio","serviceDesc":"Multilingüe, 24/7."
+  }
+}
