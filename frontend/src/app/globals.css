@@ -1,14 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
   * { @apply border-ink-200; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { @apply bg-white text-ink-900 font-sans antialiased; overflow-x: hidden; }
   ::selection { background: #EA580C; color: white; }
+
+  input, textarea, select {
+    color: #111827 !important;
+    background-color: #ffffff !important;
+  }
+  input::placeholder, textarea::placeholder {
+    color: #9ca3af !important;
+  }
 }
 
 @layer components {
