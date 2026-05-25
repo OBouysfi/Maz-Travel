@@ -63,7 +63,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <label className="text-xs font-semibold text-ink-700 mb-1.5 block">{t('phone')} *</label>
-                    <input required value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className="w-full bg-white border border-ink-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500" />
+                    <input required value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value.replace(/[^0-9+\s]/g, '') })} inputMode="tel" className="w-full bg-white border border-ink-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500" />
                   </div>
                   <div className="md:col-span-2">
                     <label className="text-xs font-semibold text-ink-700 mb-1.5 block">{t('email')} *</label>

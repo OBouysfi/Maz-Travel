@@ -59,16 +59,19 @@ export default function ExcursionsPage() {
               </div>
             </div>
 
-            <div className="bg-white border-l-4 border-brand-600 rounded-xl shadow-lg p-6">
+            <div className="bg-white border-l-4 border-brand-600 rounded-xl shadow-lg p-6 lg:sticky lg:top-24">
               <h3 className="font-bold text-lg mb-5 text-ink-900 text-center">{t('contactUs')}</h3>
               <div className="flex justify-center gap-3 flex-wrap">
-                <a href="tel:+212600000000" className="w-12 h-12 bg-deep-100 hover:bg-deep-600 hover:text-white rounded-full flex items-center justify-center text-deep-800 transition">
+                <a href="tel:+212600000000" title="+212600000000" className="relative group/tel w-12 h-12 bg-ink-100 hover:bg-ink-900 hover:text-white rounded-full flex items-center justify-center text-ink-700 transition">
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-ink-900 text-white text-xs px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover/tel:opacity-100 transition pointer-events-none">
+                    +212600000000
+                  </span>
                 </a>
                 <a href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP || '+212600000000').replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-green-100 hover:bg-green-500 hover:text-white rounded-full flex items-center justify-center text-green-700 transition">
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
                 </a>
-                <a href="mailto:contact@maztravel.ma" className="w-12 h-12 bg-brand-100 hover:bg-brand-600 hover:text-white rounded-full flex items-center justify-center text-brand-700 transition">
+                <a href="https://mail.google.com/mail/?view=cm&to=infos.humanjobs@gmail.com&subject=Demande de renseignement - Maz Travel&body=Bonjour," className="w-12 h-12 bg-brand-100 hover:bg-brand-600 hover:text-white rounded-full flex items-center justify-center text-brand-700 transition" target="_blank" rel="noopener noreferrer">
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </a>
               </div>

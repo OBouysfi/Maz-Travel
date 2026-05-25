@@ -129,7 +129,7 @@ export default function TransfersPage() {
                   <input required type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
                     placeholder="Email" style={{ color: '#111827' }}
                     className="w-full px-4 py-3 border border-ink-200 rounded-xl text-sm focus:outline-none focus:border-brand-500" />
-                  <input required value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })}
+                  <input required value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value.replace(/[^0-9+\s]/g, '') })} inputMode="tel"
                     placeholder="Téléphone" style={{ color: '#111827' }}
                     className="w-full px-4 py-3 border border-ink-200 rounded-xl text-sm focus:outline-none focus:border-brand-500 md:col-span-2" />
                 </div>
