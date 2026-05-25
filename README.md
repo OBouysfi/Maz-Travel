@@ -70,7 +70,7 @@ frontend/public/videos/hero.mp4
 ```bash
 mysql -u root -p < database/init.sql
 ```             
-                        #http://localhost:8080
+                        #http://localhost:8081
 
 ### Backend
 ```bash
@@ -138,4 +138,4 @@ maz-travel/
 
 **MySQL ne démarre pas** → `lsof -i :3306`
 **Reset DB** → `docker-compose exec backend npx prisma migrate reset --force`
-**Port 80 occupé** → modifier `docker-compose.yml` : `"8080:80"`
+**Port 80 occupé** → modifier `docker-compose.yml` : `"8081:80"`
