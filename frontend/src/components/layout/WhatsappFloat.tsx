@@ -1,7 +1,7 @@
 'use client';
 
 export default function WhatsappFloat() {
-  const phone = process.env.NEXT_PUBLIC_WHATSAPP || '+212600000000';
+  const phone = process.env.NEXT_PUBLIC_WHATSAPP || '+212679067586';
   return (
     <a
       href={`https://wa.me/${phone.replace(/[^0-9]/g, '')}?text=${encodeURIComponent('Bonjour Maz Travel, je souhaite avoir des informations.')}`}

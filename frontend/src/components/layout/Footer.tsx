@@ -28,7 +28,7 @@ export default function Footer() {
             <p className="text-ink-400 text-sm leading-relaxed mb-6 max-w-sm">{t('tagline')}</p>
             <div className="space-y-2.5 text-sm">
               <div className="text-ink-300">Avenue Mohamed VI, Marrakech 40000</div>
-              <div className="text-ink-300"><a href="tel:+212600000000" className="hover:text-white">+212 6 00 00 00 00</a></div>
+              <div className="text-ink-300"><a href="tel:+212679067586" className="hover:text-white">+212 6 00 00 00 00</a></div>
               <div className="text-ink-300"><a href="mailto:contact@maztravel.ma" className="hover:text-white">contact@maztravel.ma</a></div>
             </div>
           </div>

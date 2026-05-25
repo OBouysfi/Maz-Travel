@@ -58,7 +58,7 @@ services:
       - backend
     environment:
       NEXT_PUBLIC_API_URL: "http://localhost/api"
-      NEXT_PUBLIC_WHATSAPP: "+212600000000"
+      NEXT_PUBLIC_WHATSAPP: "+212637208455"
       NEXT_PUBLIC_SITE_URL: "http://localhost"
       NODE_ENV: production
     ports:

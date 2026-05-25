@@ -105,7 +105,7 @@ router.put('/:id/respond', auth, async (req, res, next) => {
               <div style="font-size:36px;color:#EA580C;font-weight:bold;margin:6px 0;">${quote.adminPrice} ${quote.adminCurrency}</div>
             </div>
             ${adminNote ? `<div style="margin-top:20px;padding:16px;background:#F5F5F5;border-radius:8px;"><p style="margin:0;white-space:pre-wrap;">${adminNote}</p></div>` : ''}
-            <p style="margin-top:24px;">Pour confirmer votre réservation, répondez à cet email ou contactez-nous au <a href="tel:+212600000000">+212 6 00 00 00 00</a>.</p>
+            <p style="margin-top:24px;">Pour confirmer votre réservation, répondez à cet email ou contactez-nous au <a href="tel:+21267-067586">+212 6 00 00 00 00</a>.</p>
             <p style="color:#666;font-size:13px;margin-top:32px;">Cordialement,<br><b>L'équipe Maz Travel</b><br>Marrakech, Maroc</p>
           </div>
         </div>

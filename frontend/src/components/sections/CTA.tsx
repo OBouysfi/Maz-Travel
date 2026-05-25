@@ -5,7 +5,7 @@ import { Link } from '@/i18n/routing';
 
 export default function CTA() {
   const t = useTranslations('cta');
-  const phone = process.env.NEXT_PUBLIC_WHATSAPP || '+212600000000';
+  const phone = process.env.NEXT_PUBLIC_WHATSAPP || '+212679067586';
 
   return (
     <section className="py-20 lg:py-28">

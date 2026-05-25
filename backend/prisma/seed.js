@@ -145,7 +145,7 @@ async function main() {
     { keyName: 'rate_usd_mad', value: '9.85' },
     { keyName: 'contact_phone', value: '+212 6 00 00 00 00' },
     { keyName: 'contact_email', value: 'contact@maztravel.ma' },
-    { keyName: 'contact_whatsapp', value: '+212600000000' },
+    { keyName: 'contact_whatsapp', value: '+212679067586' },
     { keyName: 'contact_address', value: 'Avenue Mohamed VI, Marrakech 40000, Maroc' },
     { keyName: 'social_facebook', value: 'https://facebook.com/maztravel' },
     { keyName: 'social_instagram', value: 'https://instagram.com/maztravel' },
