@@ -69,7 +69,8 @@ frontend/public/videos/hero.mp4
 ### Base de données
 ```bash
 mysql -u root -p < database/init.sql
-```
+```             
+                        #http://localhost:8080
 
 ### Backend
 ```bash

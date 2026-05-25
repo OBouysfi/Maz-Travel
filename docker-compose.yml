@@ -80,6 +80,19 @@ services:
     networks:
       - maz_network
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: maz_phpmyadmin
+    restart: unless-stopped
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: rootpass
+    ports:
+      - "8080:80"
+    networks:
+      - maz_network    
+      
 volumes:
   mysql_data:
 
