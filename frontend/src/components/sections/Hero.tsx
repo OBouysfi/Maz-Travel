@@ -18,8 +18,8 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[760px] overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center animate-ken-burns"
+    <section className="relative min-h-[760px] overflow-visible">
+      <div className="absolute inset-0 bg-cover bg-center animate-ken-burns overflow-hidden"
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1539020140153-e479b8c5cf75?w=1920&q=80')",
           opacity: videoLoaded ? 0 : 1,
@@ -27,7 +27,7 @@ export default function Hero() {
         }}
       />
 
-      <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover"
+      <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover overflow-hidden"
         autoPlay muted loop playsInline preload="auto"
         style={{ opacity: videoLoaded ? 1 : 0, transition: 'opacity 1s ease-out' }}>
         <source src="/videos/hero.mp4" type="video/mp4" />
