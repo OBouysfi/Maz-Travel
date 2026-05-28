@@ -1,11 +1,10 @@
 'use client';
 
-import AdminShell from '@/components/admin/AdminShell';
 import AdminCRUD from '@/components/admin/AdminCRUD';
 
 export default function AdminTransfers() {
   return (
-    <AdminShell>
+    <>
       <AdminCRUD
         endpoint="/transfers"
         title="Trajets transfert"
@@ -20,6 +19,6 @@ export default function AdminTransfers() {
           { key: 'active', label: 'Actif', type: 'checkbox' },
         ]}
       />
-    </AdminShell>
+    </>
   );
 }

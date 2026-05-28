@@ -1,11 +1,10 @@
 'use client';
 
-import AdminShell from '@/components/admin/AdminShell';
 import AdminCRUD from '@/components/admin/AdminCRUD';
 
 export default function AdminGallery() {
   return (
-    <AdminShell>
+    <>
       <AdminCRUD
         endpoint="/gallery"
         title="Galerie"
@@ -18,6 +17,6 @@ export default function AdminGallery() {
           { key: 'active', label: 'Actif', type: 'checkbox' },
         ]}
       />
-    </AdminShell>
+    </>
   );
 }

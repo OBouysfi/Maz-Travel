@@ -1,11 +1,10 @@
 'use client';
 
-import AdminShell from '@/components/admin/AdminShell';
 import AdminCRUD from '@/components/admin/AdminCRUD';
 
 export default function AdminTestimonials() {
   return (
-    <AdminShell>
+    <>
       <AdminCRUD
         endpoint="/testimonials"
         title="Témoignages"
@@ -21,6 +20,6 @@ export default function AdminTestimonials() {
           { key: 'active', label: 'Actif', type: 'checkbox' },
         ]}
       />
-    </AdminShell>
+    </>
   );
 }

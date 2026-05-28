@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { api } from '@/lib/api';
-import AdminShell from '@/components/admin/AdminShell';
 
 export default function AdminQuotes() {
   const [items, setItems] = useState<any[]>([]);
@@ -36,7 +35,7 @@ export default function AdminQuotes() {
   };
 
   return (
-    <AdminShell>
+    <>
       <h1 className="text-2xl font-bold text-ink-900 mb-1">Gestion des devis</h1>
       <p className="text-sm text-ink-500 mb-6">Répondez aux clients en saisissant un prix</p>
 
@@ -137,6 +136,6 @@ export default function AdminQuotes() {
           </div>
         )}
       </div>
-    </AdminShell>
+    </>
   );
 }

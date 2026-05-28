@@ -24,35 +24,96 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen bg-ink-50 flex items-center justify-center p-4">
-      <div className="w-full max-w-sm">
-        <div className="text-center mb-8">
-          <div className="inline-flex w-14 h-14 bg-gradient-to-br from-brand-500 to-brand-600 rounded-2xl items-center justify-center mb-4 shadow-xl shadow-brand-500/30">
-            <svg viewBox="0 0 24 24" fill="none" className="w-7 h-7 text-white" stroke="currentColor" strokeWidth={2.5}><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-          </div>
-          <h1 className="text-2xl font-bold text-ink-900">Maz Travel Admin</h1>
-          <p className="text-sm text-ink-500 mt-1">Connectez-vous pour continuer</p>
-        </div>
+    <div className="relative min-h-screen overflow-hidden">
+      
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/hero.mp4" type="video/mp4" />
+      </video>
 
-        <form onSubmit={submit} className="bg-white rounded-2xl border border-ink-100 p-7 shadow-sm">
-          <div className="mb-4">
-            <label className="text-xs font-semibold text-ink-700 mb-1.5 block">Email</label>
-            <input required type="email" value={email} onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-ink-50 border border-ink-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500" />
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
+
+      {/* Content */}
+      <div className="relative z-10 min-h-screen flex items-center justify-center p-4">
+        <div className="w-full max-w-sm">
+
+          <div className="text-center mb-8">
+            <div className="inline-flex w-14 h-14 bg-gradient-to-br from-brand-500 to-brand-600 rounded-2xl items-center justify-center mb-4 shadow-xl shadow-brand-500/30">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                className="w-7 h-7 text-white"
+                stroke="currentColor"
+                strokeWidth={2.5}
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+              </svg>
+            </div>
+
+            <h1 className="text-3xl font-bold text-white">
+              Maz Travel Admin
+            </h1>
+
+            <p className="text-sm text-white/70 mt-2">
+              Connectez-vous pour continuer
+            </p>
           </div>
-          <div className="mb-5">
-            <label className="text-xs font-semibold text-ink-700 mb-1.5 block">Mot de passe</label>
-            <input required type="password" value={password} onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-ink-50 border border-ink-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500" />
-          </div>
-          {err && <div className="bg-red-50 text-red-800 border border-red-200 px-4 py-2.5 rounded-xl text-sm mb-4">{err}</div>}
-          <button type="submit" disabled={loading} className="btn-primary w-full disabled:opacity-60">
-            {loading ? '...' : 'Se connecter'}
-          </button>
-          <div className="text-xs text-ink-400 text-center mt-4">
-            Demo : <code className="bg-ink-100 px-2 py-0.5 rounded">admin@maztravel.ma / admin123</code>
-          </div>
-        </form>
+
+          <form
+            onSubmit={submit}
+            className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-7 shadow-2xl"
+          >
+            <div className="mb-4">
+              <label className="text-xs font-semibold text-white mb-1.5 block">
+                Email
+              </label>
+
+              <input
+                required
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-400"
+              />
+            </div>
+
+            <div className="mb-5">
+              <label className="text-xs font-semibold text-white mb-1.5 block">
+                Mot de passe
+              </label>
+
+              <input
+                required
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-400"
+              />
+            </div>
+
+            {err && (
+              <div className="bg-red-500/20 text-red-100 border border-red-400/30 px-4 py-2.5 rounded-xl text-sm mb-4">
+                {err}
+              </div>
+            )}
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="btn-primary w-full disabled:opacity-60"
+            >
+              {loading ? '...' : 'Se connecter'}
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

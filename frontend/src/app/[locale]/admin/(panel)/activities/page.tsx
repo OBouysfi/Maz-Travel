@@ -1,11 +1,10 @@
 'use client';
 
-import AdminShell from '@/components/admin/AdminShell';
 import AdminCRUD from '@/components/admin/AdminCRUD';
 
 export default function AdminActivities() {
   return (
-    <AdminShell>
+    <>
       <AdminCRUD
         endpoint="/activities"
         title="Activités"
@@ -28,6 +27,6 @@ export default function AdminActivities() {
           { key: 'active', label: 'Actif', type: 'checkbox' },
         ]}
       />
-    </AdminShell>
+    </>
   );
 }

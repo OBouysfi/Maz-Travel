@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { api } from '@/lib/api';
-import AdminShell from '@/components/admin/AdminShell';
 
 export default function AdminContacts() {
   const [items, setItems] = useState<any[]>([]);
@@ -14,7 +13,7 @@ export default function AdminContacts() {
   const remove = async (id: number) => { if (confirm('Supprimer ?')) { await api.delete(`/contacts/${id}`); load(); } };
 
   return (
-    <AdminShell>
+    <>
       <h1 className="text-2xl font-bold text-ink-900 mb-1">Messages contact</h1>
       <p className="text-sm text-ink-500 mb-6">{items.length} message(s)</p>
 
@@ -45,6 +44,6 @@ export default function AdminContacts() {
           </div>
         ))}
       </div>
-    </AdminShell>
+    </>
   );
 }

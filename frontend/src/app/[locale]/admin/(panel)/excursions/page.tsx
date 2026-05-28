@@ -1,11 +1,10 @@
 'use client';
 
-import AdminShell from '@/components/admin/AdminShell';
 import AdminCRUD from '@/components/admin/AdminCRUD';
 
 export default function AdminExcursions() {
   return (
-    <AdminShell>
+    <>
       <AdminCRUD
         endpoint="/excursions"
         title="Excursions"
@@ -29,6 +28,6 @@ export default function AdminExcursions() {
           { key: 'active', label: 'Actif', type: 'checkbox' },
         ]}
       />
-    </AdminShell>
+    </>
   );
 }

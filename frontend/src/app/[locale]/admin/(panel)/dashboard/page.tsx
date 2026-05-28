@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { api } from '@/lib/api';
-import AdminShell from '@/components/admin/AdminShell';
 import { Link } from '@/i18n/routing';
 
 export default function AdminDashboard() {
@@ -11,7 +10,7 @@ export default function AdminDashboard() {
   useEffect(() => { api.get('/admin/stats').then((r) => setStats(r.data)).catch(() => {}); }, []);
 
   return (
-    <AdminShell>
+    <>
       <h1 className="text-2xl font-bold text-ink-900 mb-1">Vue d'ensemble</h1>
       <p className="text-sm text-ink-500 mb-8">Tableau de bord — Maz Travel</p>
 
@@ -75,6 +74,6 @@ export default function AdminDashboard() {
           </div>
         </>
       )}
-    </AdminShell>
+    </>
   );
 }
