@@ -27,8 +27,22 @@ router.get('/:slug', async (req, res, next) => {
   } catch (e) { next(e); }
 });
 
-router.post('/', auth, async (req, res, next) => { try { res.json(await prisma.activity.create({ data: req.body })); } catch (e) { next(e); } });
-router.put('/:id', auth, async (req, res, next) => { try { res.json(await prisma.activity.update({ where: { id: +req.params.id }, data: req.body })); } catch (e) { next(e); } });
+router.post('/', auth, async (req, res, next) => {
+  try {
+    const { id, createdAt, updatedAt, title, description, ...data } = req.body;
+    Object.keys(data).forEach(k => { if (data[k] === null || data[k] === '') delete data[k]; });
+    res.json(await prisma.activity.create({ data }));
+  } catch (e) { next(e); }
+});
+
+router.put('/:id', auth, async (req, res, next) => {
+  try {
+    const { id, createdAt, updatedAt, title, description, ...data } = req.body;
+    Object.keys(data).forEach(k => { if (data[k] === null || data[k] === '') delete data[k]; });
+    res.json(await prisma.activity.update({ where: { id: +req.params.id }, data }));
+  } catch (e) { next(e); }
+});
+
 router.delete('/:id', auth, async (req, res, next) => { try { res.json(await prisma.activity.delete({ where: { id: +req.params.id } })); } catch (e) { next(e); } });
 
 module.exports = router;
