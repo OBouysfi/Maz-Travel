@@ -61,8 +61,6 @@ services:
       NEXT_PUBLIC_WHATSAPP: "+212637208455"
       NEXT_PUBLIC_SITE_URL: "http://localhost"
       NODE_ENV: production
-    ports:
-      - "3000:3000"
     networks:
       - maz_network
 
@@ -75,6 +73,7 @@ services:
       - backend
     ports:
       - "80:80"
+      - "3000:3000"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
     networks:

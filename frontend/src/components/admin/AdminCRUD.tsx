@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react';
 import { api } from '@/lib/api';
 
+const UPLOADS_URL = process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') ?? '';
+
 type Field = { key: string; label: string; type?: 'text' | 'number' | 'textarea' | 'select' | 'checkbox' | 'image'; options?: string[]; col?: 1 | 2 };
 
 export default function AdminCRUD({ endpoint, title, fields, displayFields }: {
@@ -13,6 +15,7 @@ export default function AdminCRUD({ endpoint, title, fields, displayFields }: {
   const [loading, setLoading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState<string | null>(null);
 
+
   const load = () => { api.get(endpoint).then((r) => setItems(r.data)).catch(() => {}); };
   useEffect(load, [endpoint]);
 
@@ -21,8 +24,14 @@ export default function AdminCRUD({ endpoint, title, fields, displayFields }: {
     try {
       const data = { ...editing };
       delete data.id; delete data.createdAt; delete data.updatedAt;
-      // Coerce numbers
-      fields.forEach((f) => { if (f.type === 'number' && data[f.key] !== '' && data[f.key] != null) data[f.key] = +data[f.key]; });
+      Object.keys(data).forEach(k => {
+        if (data[k] === null || data[k] === undefined || data[k] === '') delete data[k];
+      });
+      
+      fields.forEach((f) => {
+        if (f.type === 'number' && data[f.key] !== undefined) data[f.key] = +data[f.key];
+      });
+      
       if (editing.id) await api.put(`${endpoint}/${editing.id}`, data);
       else await api.post(endpoint, data);
       setEditing(null); load();
@@ -71,7 +80,7 @@ export default function AdminCRUD({ endpoint, title, fields, displayFields }: {
                 <tr key={row.id} className="border-t border-ink-100 hover:bg-ink-50/50">
                   {displayFields.map((f) => (
                     <td key={f} className="px-4 py-3 text-ink-700 max-w-[250px] truncate">
-                      {f === 'image' && row[f] ? <img src={row[f]} className="w-12 h-8 object-cover rounded" /> :
+                      {f === 'image' && row[f] ? <img src={row[f].startsWith('http') ? row[f] : `${UPLOADS_URL}${row[f]}`} className="w-12 h-8 object-cover rounded" /> :
                        typeof row[f] === 'boolean' ? (row[f] ? '✓' : '—') :
                        typeof row[f] === 'string' && row[f].length > 60 ? row[f].slice(0, 60) + '…' :
                        row[f]?.toString() || '—'}
@@ -114,7 +123,7 @@ export default function AdminCRUD({ endpoint, title, fields, displayFields }: {
                       className="w-5 h-5" />
                   ) : f.type === 'image' ? (
                     <div className="flex items-center gap-3">
-                      {editing[f.key] && <img src={editing[f.key]} className="w-16 h-12 object-cover rounded border border-ink-200" />}
+                      {editing[f.key] && <img src={editing[f.key].startsWith('http') ? editing[f.key] : `${UPLOADS_URL}${editing[f.key]}`} className="w-16 h-12 object-cover rounded border border-ink-200" />}
                       <input value={editing[f.key] || ''} onChange={(e) => setEditing({ ...editing, [f.key]: e.target.value })} placeholder="URL ou uploader"
                         className="flex-1 px-3 py-2 border border-ink-200 rounded-lg text-sm focus:outline-none focus:border-brand-500" />
                       <label className="cursor-pointer bg-ink-100 hover:bg-ink-200 px-3 py-2 rounded-lg text-xs font-semibold">
