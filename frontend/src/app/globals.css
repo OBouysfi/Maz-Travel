@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 @layer base {
-  * { @apply border-ink-200; box-sizing: border-box; }
+  * { border-color: #E5E5E5; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { @apply bg-white text-ink-900 font-sans antialiased; overflow-x: hidden; }
-  ::selection { background: #EA580C; color: white; }
+  ::selection { background: #C11119; color: white; }
 
   input, textarea, select {
     color: #111827 !important;
@@ -29,7 +29,6 @@
   .card { @apply bg-white rounded-2xl border border-ink-100 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-1; }
   .text-gradient { @apply bg-gradient-to-r from-brand-600 via-brand-500 to-deep-800 bg-clip-text text-transparent; }
 
-  /* Scroll reveal */
   .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1); }
   .reveal.in { opacity: 1; transform: translateY(0); }
   .zoom-img { transition: transform 0.8s cubic-bezier(0.16,1,0.3,1); }
