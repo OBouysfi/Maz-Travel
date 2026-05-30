@@ -46,18 +46,19 @@ export default function Header() {
       solid ? 'bg-white/95 backdrop-blur-xl shadow-sm border-b border-ink-100 py-3' : 'bg-transparent py-4'
     )}>
       <div className="container flex items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-          <div className="w-10 h-10 bg-gradient-to-br from-brand-500 to-brand-600 rounded-xl flex items-center justify-center group-hover:rotate-180 transition-transform duration-700 shadow-lg shadow-brand-500/40">
-            <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5 text-white" stroke="currentColor" strokeWidth={2.5}>
-              <circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
-            </svg>
+       <Link href="/" className="flex items-center gap-2.5 group shrink-0">
+          <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-brand-500/40">
+            <img
+              src="/images/maz_logo.png"
+              alt="Maz Travel"
+              className="w-full h-full object-cover"
+            />
           </div>
           <div>
             <div className={cn('font-bold text-base leading-none tracking-tight transition-colors', solid ? 'text-ink-900' : 'text-white')}>Maz Travel</div>
             <div className={cn('text-[9px] tracking-widest uppercase mt-0.5 transition-colors', solid ? 'text-ink-400' : 'text-white/70')}>Marrakech · Morocco</div>
           </div>
-        </Link>
-
+       </Link>
         <nav className="hidden xl:flex items-center gap-1">
           {links.map((l) => (
             <Link key={l.href} href={l.href as any}

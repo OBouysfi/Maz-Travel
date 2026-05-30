@@ -121,11 +121,12 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
       >
         {/* Logo */}
         <div className={`flex items-center gap-3 px-4 py-5 border-b border-white/8 shrink-0 ${collapsed ? 'justify-center' : ''}`}>
-          <div className="w-9 h-9 shrink-0 bg-[#F97316] rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/30">
-            <svg viewBox="0 0 24 24" fill="none" className="w-4.5 h-4.5 text-white" stroke="currentColor" strokeWidth={2.5}>
-              <circle cx="12" cy="12" r="10"/>
-              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
-            </svg>
+          <div className="w-9 h-9 shrink-0 rounded-xl overflow-hidden shadow-lg shadow-orange-500/30">
+            <img
+              src="/images/maz_logo.png"
+              alt="Maz Travel"
+              className="w-full h-full object-cover"
+            />
           </div>
           {!collapsed && (
             <div className="overflow-hidden">
@@ -134,7 +135,6 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
             </div>
           )}
         </div>
-
         {/* Nav */}
         <nav className="flex-1 overflow-y-auto py-4 px-2 space-y-0.5">
           {nav.map((n) => {
