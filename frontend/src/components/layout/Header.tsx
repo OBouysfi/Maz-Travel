@@ -46,14 +46,14 @@ export default function Header() {
       solid ? 'bg-white/95 backdrop-blur-xl shadow-sm border-b border-ink-100 py-3' : 'bg-transparent py-4'
     )}>
       <div className="container flex items-center justify-between gap-4">
-       <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-          <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-brand-500/40">
-            <img
-              src="/images/maz_logo.png"
-              alt="Maz Travel"
-              className="w-full h-full object-cover"
-            />
-          </div>
+       <Link href="/" className="flex items-center gap-0 group shrink-0">
+          <div className="w-16 h-16 shrink-0">
+          <img
+            src="/images/maz_logo.png"
+            alt="Maz Travel"
+            className="w-full h-full object-contain"
+          />
+        </div>
           <div>
             <div className={cn('font-bold text-base leading-none tracking-tight transition-colors', solid ? 'text-ink-900' : 'text-white')}>Maz Travel</div>
             <div className={cn('text-[9px] tracking-widest uppercase mt-0.5 transition-colors', solid ? 'text-ink-400' : 'text-white/70')}>Marrakech · Morocco</div>
