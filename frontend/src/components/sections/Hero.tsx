@@ -1,37 +1,26 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useRef, useState, useEffect } from 'react';
 import BookingTabs from '@/components/booking/BookingTabs';
 
 export default function Hero() {
   const t = useTranslations('hero');
-  const [videoLoaded, setVideoLoaded] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    const onCanPlay = () => setVideoLoaded(true);
-    v.addEventListener('canplay', onCanPlay);
-    return () => v.removeEventListener('canplay', onCanPlay);
-  }, []);
 
   return (
-    <section className="relative min-h-[760px] overflow-visible">
-      <div className="absolute inset-0 bg-cover bg-center animate-ken-burns overflow-hidden"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1539020140153-e479b8c5cf75?w=1920&q=80')",
-          opacity: videoLoaded ? 0 : 1,
-          transition: 'opacity 1s ease-out',
-        }}
-      />
-
-      <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover overflow-hidden"
-        autoPlay muted loop playsInline preload="auto"
-        style={{ opacity: videoLoaded ? 1 : 0, transition: 'opacity 1s ease-out' }}>
+    <section className="relative min-h-[760px] overflow-visible bg-ink-900">
+      <video
+        className="absolute inset-0 w-full h-full object-cover overflow-hidden"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+      >
+        <source
+          src="https://videos.pexels.com/video-files/4146226/4146226-uhd_2560_1440_24fps.mp4"
+          type="video/mp4"
+        />
         <source src="/videos/hero.mp4" type="video/mp4" />
-        <source src="https://videos.pexels.com/video-files/4146226/4146226-uhd_2560_1440_24fps.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-gradient-to-b from-ink-900/55 via-ink-900/35 to-ink-900/85" />
@@ -49,23 +38,50 @@ export default function Hero() {
           {t('badge')}
         </div>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-4 animate-fade-up max-w-5xl" style={{ animationDelay: '100ms' }}>
+        <h1
+          className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-4 animate-fade-up max-w-5xl"
+          style={{ animationDelay: '100ms' }}
+        >
           {t('title1')}<br />
           {t('title2')} <span className="text-gradient">{t('titleAccent')}</span>
         </h1>
 
-        <p className="text-base md:text-lg text-white/85 max-w-2xl leading-relaxed mb-10 animate-fade-up" style={{ animationDelay: '200ms' }}>
+        <p
+          className="text-base md:text-lg text-white/85 max-w-2xl leading-relaxed mb-10 animate-fade-up"
+          style={{ animationDelay: '200ms' }}
+        >
           {t('subtitle')}
         </p>
 
-        <div className="w-full animate-scale-in flex justify-center" style={{ animationDelay: '300ms' }}>
+        <div
+          className="w-full animate-scale-in flex justify-center"
+          style={{ animationDelay: '300ms' }}
+        >
           <BookingTabs />
         </div>
 
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-8 text-sm text-white/90 animate-fade-up" style={{ animationDelay: '400ms' }}>
-          <span className="flex items-center gap-1.5"><svg className="w-4 h-4 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3}><polyline points="20 6 9 17 4 12"/></svg> {t('trustPrice')}</span>
-          <span className="flex items-center gap-1.5"><svg className="w-4 h-4 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3}><polyline points="20 6 9 17 4 12"/></svg> {t('trustPayment')}</span>
-          <span className="flex items-center gap-1.5"><svg className="w-4 h-4 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3}><polyline points="20 6 9 17 4 12"/></svg> {t('trustSupport')}</span>
+        <div
+          className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-8 text-sm text-white/90 animate-fade-up"
+          style={{ animationDelay: '400ms' }}
+        >
+          <span className="flex items-center gap-1.5">
+            <svg className="w-4 h-4 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3}>
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            {t('trustPrice')}
+          </span>
+          <span className="flex items-center gap-1.5">
+            <svg className="w-4 h-4 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3}>
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            {t('trustPayment')}
+          </span>
+          <span className="flex items-center gap-1.5">
+            <svg className="w-4 h-4 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3}>
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            {t('trustSupport')}
+          </span>
         </div>
       </div>
     </section>
