@@ -34,7 +34,7 @@ services:
     environment:
       DATABASE_URL: "mysql://maz_user:maz_pass@mysql:3306/maz_travel"
       JWT_SECRET: "change_this_secret_in_production_please"
-      NODE_ENV: production
+      NODE_ENV: development
       PORT: 5000
       CORS_ORIGIN: "http://localhost,http://localhost:80,http://localhost:3000"
       SMTP_HOST: "smtp.gmail.com"
@@ -42,6 +42,8 @@ services:
       MAIL_FROM: "Maz Travel <no-reply@maztravel.ma>"
       MAIL_TO: "contact@maztravel.ma"
     volumes:
+      - ./backend:/app
+      - /app/node_modules
       - ./backend/uploads:/app/uploads
     ports:
       - "5000:5000"
@@ -60,7 +62,13 @@ services:
       NEXT_PUBLIC_API_URL: "http://localhost/api"
       NEXT_PUBLIC_WHATSAPP: "+212637208455"
       NEXT_PUBLIC_SITE_URL: "http://localhost"
-      NODE_ENV: production
+      NODE_ENV: development
+      WATCHPACK_POLLING: "true"
+      CHOKIDAR_USEPOLLING: "true"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
     networks:
       - maz_network
 
@@ -90,8 +98,8 @@ services:
     ports:
       - "8081:80"
     networks:
-      - maz_network    
-      
+      - maz_network
+
 volumes:
   mysql_data:
 

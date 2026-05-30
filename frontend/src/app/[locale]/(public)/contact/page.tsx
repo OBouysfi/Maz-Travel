@@ -38,7 +38,7 @@ export default function ContactPage() {
                 </div>
                 <div className="p-4 rounded-xl hover:bg-brand-50/50 transition">
                   <div className="text-xs text-ink-400 tracking-wider uppercase font-semibold mb-1">{t('phoneLabel')}</div>
-                  <a href="tel:+212679067586" className="text-ink-900 font-medium hover:text-brand-600">+212 6 00 00 00 00</a>
+                  <a href="tel:+212679067586" className="text-ink-900 font-medium hover:text-brand-600">+212679067586</a>
                 </div>
                 <div className="p-4 rounded-xl hover:bg-brand-50/50 transition">
                   <div className="text-xs text-ink-400 tracking-wider uppercase font-semibold mb-1">{t('emailLabel')}</div>

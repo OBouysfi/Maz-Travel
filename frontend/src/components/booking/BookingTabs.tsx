@@ -272,27 +272,25 @@ export default function BookingTabs() {
               placeholder={t('pickup')}
               routes={routes}
             />
-
-            <button
-              onClick={swap}
-              type="button"
-              title={t('swap')}
-              className="w-11 h-11 bg-ink-100 hover:bg-brand-100 hover:text-brand-600 rounded-full flex items-center justify-center transition group"
-            >
-              <svg
-                className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
+              <button
+                onClick={swap}
+                type="button"
+                title={t('swap')}
+                className="w-11 h-11 bg-brand-600 rounded-full flex items-center justify-center transition group"
               >
-                <polyline points="17 1 21 5 17 9" />
-                <path d="M3 11V9a4 4 0 0 1 4-4h14" />
-                <polyline points="7 23 3 19 7 15" />
-                <path d="M21 13v2a4 4 0 0 1-4 4H3" />
-              </svg>
-            </button>
-
+                <svg
+                  className="w-4 h-4 text-white group-hover:rotate-180 transition-transform duration-500"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <polyline points="17 1 21 5 17 9" />
+                  <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                  <polyline points="7 23 3 19 7 15" />
+                  <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+                </svg>
+              </button>
             <LocationInput
               value={form.dropLocation}
               onChange={v =>
