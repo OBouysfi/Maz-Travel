@@ -44,20 +44,14 @@ export default function AdminLogin() {
       <div className="relative z-10 min-h-screen flex items-center justify-center p-4">
         <div className="w-full max-w-sm">
 
-          <div className="text-center mb-8">
-            <div className="inline-flex w-14 h-14 bg-gradient-to-br from-brand-500 to-brand-600 rounded-2xl items-center justify-center mb-4 shadow-xl shadow-brand-500/30">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                className="w-7 h-7 text-white"
-                stroke="currentColor"
-                strokeWidth={2.5}
-              >
-                <circle cx="12" cy="12" r="10" />
-                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
-              </svg>
-            </div>
-
+        <div className="text-center mb-8">
+          <div className="inline-flex w-20 h-20 rounded-2xl items-center justify-center mb-4">
+            <img
+              src="/images/maz_logo.png"
+              alt="Maz Travel"
+              className="w-20 h-20 object-contain"
+            />
+          </div>
             <h1 className="text-3xl font-bold text-white">
               Maz Travel Admin
             </h1>
