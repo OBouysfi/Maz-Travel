@@ -73,7 +73,6 @@ export default function AdminLogin() {
               <input
                 required
                 type="email"
-                value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-400"
               />
@@ -87,7 +86,6 @@ export default function AdminLogin() {
               <input
                 required
                 type="password"
-                value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-400"
               />
