@@ -135,7 +135,7 @@ export default function ExcursionsPage() {
                             <span className="flex items-center gap-1.5">📅 <span className="font-medium">{ex.duration}</span></span>
                             {ex.badges?.includes('Annulation gratuite') && <span className="flex items-center gap-1.5 text-brand-600 font-medium">✓ {t('freeCancellation')}</span>}
                           </div>
-                          <Link href="/contact" className="border-2 border-ink-900 hover:bg-ink-900 hover:text-white text-ink-900 px-5 py-2 rounded-lg text-sm font-bold uppercase tracking-wider transition">
+                          <Link href={`/excursions/${ex.slug}`} className="border-2 border-ink-900 hover:bg-ink-900 hover:text-white text-ink-900 px-5 py-2 rounded-lg text-sm font-bold uppercase tracking-wider transition">
                             {t('details')}
                           </Link>
                         </div>
