@@ -102,15 +102,16 @@ async function main() {
   }
 
   const vehicles = [
-    { name: 'Mercedes Classe E', type: 'sedan', capacity: 3, pricePerDayMad: 1200, pricePerDayEur: 120, image: 'https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=600&q=80' },
-    { name: 'Toyota Land Cruiser', type: 'suv', capacity: 6, pricePerDayMad: 1800, pricePerDayEur: 180, image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&q=80' },
-    { name: 'Mercedes Vito', type: 'minivan', capacity: 7, pricePerDayMad: 1500, pricePerDayEur: 150, image: 'https://images.unsplash.com/photo-1609520505218-7421df17a35f?w=600&q=80' },
-    { name: 'Mercedes Sprinter', type: 'minibus', capacity: 16, pricePerDayMad: 2500, pricePerDayEur: 250, image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=600&q=80' },
-  ];
-  for (const v of vehicles) {
-    const exists = await prisma.vehicle.findFirst({ where: { name: v.name } });
-    if (!exists) await prisma.vehicle.create({ data: v });
-  }
+      { name: 'Volkswagen Touareg', type: 'sedan',   capacity: 4, capacityLabel: '1 à 4 pax', pricePerDayMad: 1200, pricePerDayEur: 120, image: 'https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=600&q=80' },
+      { name: 'Mercedes Vito',      type: 'minivan', capacity: 7, capacityLabel: '1 à 7 pax', pricePerDayMad: 1500, pricePerDayEur: 150, image: 'https://images.unsplash.com/photo-1609520505218-7421df17a35f?w=600&q=80' },
+      { name: 'Renault Trafic',     type: 'minivan', capacity: 7, capacityLabel: '1 à 7 pax', pricePerDayMad: 1400, pricePerDayEur: 140, image: 'https://images.unsplash.com/photo-1600661653561-629509216228?w=600&q=80' },
+      { name: 'Fiat Scudo',         type: 'minivan', capacity: 7, capacityLabel: '1 à 7 pax', pricePerDayMad: 1400, pricePerDayEur: 140, image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&q=80' },
+      { name: 'Opel Vivaro',        type: 'minivan', capacity: 8, capacityLabel: '1 à 8 pax', pricePerDayMad: 1600, pricePerDayEur: 160, image: 'https://images.unsplash.com/photo-1617814076231-73c56d8a5cfe?w=600&q=80' },
+    ];
+    for (const v of vehicles) {
+      const exists = await prisma.vehicle.findFirst({ where: { name: v.name } });
+      if (!exists) await prisma.vehicle.create({ data: v });
+    }
 
   const testimonials = [
     { name: 'Marie Dubois', country: 'France', flag: '🇫🇷', rating: 5, language: 'fr', featured: true,

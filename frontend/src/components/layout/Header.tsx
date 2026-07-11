@@ -109,7 +109,7 @@ export default function Header() {
               </div>
             )}
           </div>
-          <Link href="/contact" className="btn-primary text-sm py-2.5 px-5 ml-2">{t('book')}</Link>
+          <Link href="/transferts" className="btn-primary text-sm py-2.5 px-5 ml-2">{t('book')}</Link>
         </div>
 
         <button onClick={() => setOpen(!open)} className={cn('xl:hidden p-2 rounded-lg transition', solid ? 'text-ink-900 hover:bg-ink-50' : 'text-white hover:bg-white/10')}>
@@ -140,7 +140,7 @@ export default function Header() {
                   </Link>
                 ))}
               </div>
-              <Link href="/contact" onClick={() => setOpen(false)} className="btn-primary text-sm py-2 px-4">{t('book')}</Link>
+              <Link href="/transferts" onClick={() => setOpen(false)} className="btn-primary text-sm py-2 px-4">{t('book')}</Link>
             </div>
           </div>
         </div>

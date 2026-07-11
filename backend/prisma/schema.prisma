@@ -136,6 +136,7 @@ model Vehicle {
   name           String
   type           String
   capacity       Int
+  capacityLabel  String?
   pricePerDayMad Float   @default(0)
   pricePerDayEur Float?
   image          String

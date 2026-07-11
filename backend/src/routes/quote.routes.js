@@ -15,7 +15,7 @@ const quoteSchema = z.object({
   duration: z.string().optional().nullable(),
   excursionId: z.number().optional().nullable(),
   activityId: z.number().optional().nullable(),
-  date: z.string(),
+  date: z.string().min(1, 'La date est requise'),
   time: z.string().optional().nullable(),
   adults: z.number().min(1).default(1),
   children: z.number().default(0),
