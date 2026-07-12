@@ -71,7 +71,11 @@ export default function ExcursionsPage() {
                 <a href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP || '+212679067586').replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-green-100 hover:bg-green-500 hover:text-white rounded-full flex items-center justify-center text-green-700 transition">
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
                 </a>
-                <a href="https://mail.google.com/mail/?view=cm&to=infos.humanjobs@gmail.com&subject=Demande de renseignement - Maz Travel&body=Bonjour," className="w-12 h-12 bg-brand-100 hover:bg-brand-600 hover:text-white rounded-full flex items-center justify-center text-brand-700 transition" target="_blank" rel="noopener noreferrer">
+                  <a href={`https://mail.google.com/mail/?view=cm&to=${encodeURIComponent('contact@maztravel.ma')}&subject=${encodeURIComponent('Demande de renseignement - Maz Travel')}&body=${encodeURIComponent('Bonjour,\n\n')}`}
+                    className="w-12 h-12 bg-brand-100 hover:bg-brand-600 hover:text-white rounded-full flex items-center justify-center text-brand-700 transition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </a>
               </div>

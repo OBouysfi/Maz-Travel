@@ -1,14 +1,27 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import PageHeader from '@/components/layout/PageHeader';
 import { api } from '@/lib/api';
 
+interface Vehicle {
+  id: number;
+  name: string;
+  capacity: number;
+  capacityLabel?: string;
+  pricePerDayMad: number;
+}
+
 export default function ContactPage() {
   const t = useTranslations('contact');
+  const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [form, setForm] = useState({ name: '', phone: '', email: '', service: '', date: '', persons: 1, message: '' });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  useEffect(() => {
+    api.get('/vehicles').then((r) => setVehicles(r.data)).catch(() => {});
+  }, []);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -69,21 +82,27 @@ export default function ContactPage() {
                     <label className="text-xs font-semibold text-ink-700 mb-1.5 block">{t('email')} *</label>
                     <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="w-full bg-white border border-ink-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500" />
                   </div>
-                  <div>
-                    <label className="text-xs font-semibold text-ink-700 mb-1.5 block">{t('service')}</label>
-                    <select value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })} className="w-full bg-white border border-ink-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500">
-                      <option value="">—</option>
-                      <option value="transfer">Transfert</option>
-                      <option value="excursion">Excursion</option>
-                      <option value="activity">Activité</option>
-                      <option value="disposition">Mise à disposition</option>
+                  <div className="md:col-span-2">
+                    <label className="text-xs font-semibold text-ink-700 mb-1.5 block">Véhicule souhaité</label>
+                    <select
+                      value={form.service}
+                      onChange={(e) => setForm({ ...form, service: e.target.value })}
+                      style={{ color: '#111827' }}
+                      className="w-full bg-white border border-ink-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500"
+                    >
+                      <option value="">Sélectionner un véhicule...</option>
+                      {vehicles.map((v) => (
+                        <option key={v.id} value={v.name}>
+                          {v.name} ({v.capacityLabel || `${v.capacity} passagers`}) — {v.pricePerDayMad.toLocaleString()} MAD
+                        </option>
+                      ))}
                     </select>
                   </div>
                   <div>
                     <label className="text-xs font-semibold text-ink-700 mb-1.5 block">{t('date')}</label>
                     <input type="date" value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} className="w-full bg-white border border-ink-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500" />
                   </div>
-                  <div className="md:col-span-2">
+                  <div>
                     <label className="text-xs font-semibold text-ink-700 mb-1.5 block">{t('persons')}</label>
                     <input type="number" min={1} value={form.persons} onChange={(e) => setForm({ ...form, persons: +e.target.value })} className="w-full bg-white border border-ink-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500" />
                   </div>

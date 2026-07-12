@@ -30,7 +30,9 @@ export default function AdminContacts() {
                 <div className="flex flex-wrap gap-3 text-xs text-ink-500">
                   <span>📧 {c.email}</span>
                   {c.phone && <span>📱 {c.phone}</span>}
-                  {c.service && <span>🛎 {c.service}</span>}
+                  {c.service && <span>🚙 Véhicule souhaité : {c.service}</span>}
+                  {c.date && <span>📅 {new Date(c.date).toLocaleDateString('fr-FR')}</span>}
+                  {c.persons && <span>👥 {c.persons} personne{c.persons > 1 ? 's' : ''}</span>}
                 </div>
               </div>
               <div className="text-xs text-ink-400">{new Date(c.createdAt).toLocaleString('fr')}</div>
@@ -38,7 +40,14 @@ export default function AdminContacts() {
             <p className="text-sm text-ink-700 mb-4 whitespace-pre-wrap">{c.message}</p>
             <div className="flex gap-2">
               {!c.read && <button onClick={() => markRead(c.id)} className="bg-ink-900 hover:bg-brand-600 text-white px-3 py-1.5 rounded-lg text-xs font-semibold transition">✓ Marquer lu</button>}
-              <a href={`mailto:${c.email}`} className="border border-ink-200 hover:bg-ink-50 px-3 py-1.5 rounded-lg text-xs font-medium">Répondre</a>
+              <a
+                href={`https://mail.maztravel.ma/SOGo/so/contact@maztravel.ma/Mail/UIxMailPopupView#!/Mail/0/new?mailto:${c.email}?subject=${encodeURIComponent('Maz Travel — ' + c.name)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-ink-200 hover:bg-ink-50 px-3 py-1.5 rounded-lg text-xs font-medium"
+              >
+                Répondre
+              </a>
               <button onClick={() => remove(c.id)} className="border border-red-200 text-red-600 hover:bg-red-50 px-3 py-1.5 rounded-lg text-xs font-medium ml-auto">Supprimer</button>
             </div>
           </div>
