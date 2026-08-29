@@ -5,18 +5,21 @@ import { useTranslations } from 'next-intl';
 export default function WhatsappFloat() {
   const t = useTranslations('hero');
   const phone = process.env.NEXT_PUBLIC_WHATSAPP || '+212679067586';
+
+  const cta = t.has('whatsappCta') ? t('whatsappCta') : 'Need help? Chat with a local';
+  const msg = t.has('whatsappMsg') ? t('whatsappMsg') : 'Hello Maz Travel, I would like to book a Marrakech airport transfer.';
+
   return (
     <a
-      href={`https://wa.me/${phone.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(t('whatsappMsg'))}`}
+      href={`https://wa.me/${phone.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(msg)}`}
       target="_blank" rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-40 group flex items-center" aria-label="WhatsApp"
     >
       <span className="absolute left-0 w-14 h-14 rounded-full bg-green-500 animate-pulse-ring" />
 
-      {/* Label — visible sur desktop, apparait au hover sur mobile */}
       <span className="relative order-2 md:order-1 max-w-0 md:max-w-xs overflow-hidden md:mr-3 whitespace-nowrap opacity-0 md:opacity-100 group-hover:max-w-xs group-hover:opacity-100 group-hover:mr-3 transition-all duration-300">
         <span className="block bg-white text-ink-900 text-sm font-semibold px-4 py-2 rounded-full shadow-xl">
-          {t('whatsappCta')}
+          {cta}
         </span>
       </span>
 
