@@ -2,7 +2,9 @@
   "nav": { "home":"Home","transfers":"Transfers","excursions":"Excursions","activities":"Activities","disposition":"Chauffeur","about":"About","contact":"Contact","book":"Book" },
   "hero": {
     "badge":"Available 24/7 — Quote in 15 min",
-    "title1":"Your ride in Morocco,","title2":"booked in","titleAccent":"30 seconds",
+    "title1":"Your Marrakech airport transfer,",
+    "title2":"booked in",
+    "titleAccent":"minutes",
     "subtitle":"Fixed price. Professional drivers. 24/7 availability.",
     "trustPrice":"Fixed price","trustPayment":"Flexible payment","trustSupport":"24/7 service"
   },

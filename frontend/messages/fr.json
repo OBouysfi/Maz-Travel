@@ -2,9 +2,9 @@
   "nav": { "home":"Accueil","transfers":"Transferts","excursions":"Excursions","activities":"Activités","disposition":"Mise à disposition","about":"À propos","contact":"Contact","book":"Réserver" },
   "hero": {
     "badge":"Disponible 24h/24 — Devis en 15 min",
-    "title1":"Votre trajet au Maroc,",
+    "title1":"Votre transfert aéroport à Marrakech,",
     "title2":"réservé en",
-    "titleAccent":"30 secondes",
+    "titleAccent":"quelques minutes",
     "subtitle":"Prix transparent. Chauffeurs professionnels. Disponibilité 24/7.",
     "trustPrice":"Prix fixe garanti","trustPayment":"Paiement flexible","trustSupport":"Service 24/7"
   },

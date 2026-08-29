@@ -2,7 +2,9 @@
   "nav": { "home":"Inicio","transfers":"Traslados","excursions":"Excursiones","activities":"Actividades","disposition":"Chófer","about":"Acerca","contact":"Contacto","book":"Reservar" },
   "hero": {
     "badge":"Disponible 24/7 — Presupuesto en 15 min",
-    "title1":"Tu viaje en Marruecos,","title2":"reservado en","titleAccent":"30 segundos",
+    "title1":"Tu traslado al aeropuerto de Marrakech,",
+    "title2":"reservado en",
+    "titleAccent":"minutos",
     "subtitle":"Precio fijo. Conductores profesionales. Disponibilidad 24/7.",
     "trustPrice":"Precio fijo","trustPayment":"Pago flexible","trustSupport":"Servicio 24/7"
   },
