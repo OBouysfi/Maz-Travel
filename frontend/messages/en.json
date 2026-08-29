@@ -9,6 +9,7 @@
     "trustPrice":"Fixed price","trustPayment":"Flexible payment","trustSupport":"24/7 service"
   },
   "whatsappCta": "Need help? Chat with a local",
+  "whatsappMsg": "Hello Maz Travel, I would like to book a Marrakech airport transfer.",
   "booking": {
     "tabTransfer":"Transfer","tabDisposition":"Chauffeur service",
     "pickup":"Airport, station, hotel...","dropoff":"Hotel, address or place","location":"Pickup location",
