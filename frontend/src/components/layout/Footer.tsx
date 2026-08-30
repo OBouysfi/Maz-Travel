@@ -64,9 +64,9 @@ export default function Footer() {
         <div className="pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-ink-500">
           <p>© {year} Maz Travel. {t('rights')}</p>
           <div className="flex gap-5 text-xs">
-            <a href="#" className="hover:text-white transition">Mentions légales</a>
-            <a href="#" className="hover:text-white transition">CGV</a>
-            <a href="#" className="hover:text-white transition">Confidentialité</a>
+            <Link href="/mentions-legales" className="hover:text-white transition">Mentions légales</Link>
+            <Link href="/cgv" className="hover:text-white transition">CGV</Link>
+            <Link href="/confidentialite" className="hover:text-white transition">Confidentialité</Link>
           </div>
         </div>
       </div>

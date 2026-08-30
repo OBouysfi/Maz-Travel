@@ -75,7 +75,15 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="rounded-2xl overflow-hidden border border-ink-100">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3398.345!2d-7.989!3d31.629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d96179e51%3A0x5950b6534f87adb8!2sMarrakech!5e0!3m2!1sen!2sma!4v1700000000000" width="100%" height="280" style={{ border: 0 }} loading="lazy" />
+                <iframe
+                  src="https://maps.google.com/maps?q=Marrakech&z=12&output=embed"
+                  width="100%"
+                  height="280"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Marrakech"
+                />
               </div>
             </div>
 
