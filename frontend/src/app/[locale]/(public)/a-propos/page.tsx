@@ -22,13 +22,7 @@ export default function AboutPage() {
             <div className="reveal">
               <div className="text-xs text-brand-600 tracking-[3px] font-semibold mb-3">— {t('story').toUpperCase()}</div>
               <h2 className="text-3xl md:text-4xl font-bold text-ink-900 tracking-tight mb-6">{t('story')}</h2>
-              <p className="text-ink-600 leading-relaxed mb-4">{t('storyText')}</p>
               <p className="text-ink-600 leading-relaxed">{t('intro')}</p>
-              <div className="grid grid-cols-3 gap-6 mt-10 pt-8 border-t border-ink-100">
-                <div><div className="text-3xl font-bold text-brand-600">10+</div><div className="text-xs text-ink-500 mt-1">Années</div></div>
-                <div><div className="text-3xl font-bold text-brand-600">5K+</div><div className="text-xs text-ink-500 mt-1">Clients</div></div>
-                <div><div className="text-3xl font-bold text-brand-600">50+</div><div className="text-xs text-ink-500 mt-1">Destinations</div></div>
-              </div>
             </div>
             <div className="grid grid-cols-2 gap-3">
               <img src="https://images.unsplash.com/photo-1539020140153-e479b8c5cf75?w=600&q=80" alt="" className="rounded-2xl aspect-[3/4] object-cover" />

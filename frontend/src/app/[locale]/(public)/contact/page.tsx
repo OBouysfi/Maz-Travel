@@ -28,6 +28,18 @@ export default function ContactPage() {
     setStatus('loading');
     try {
       await api.post('/contacts', { ...form, persons: Number(form.persons) });
+
+      // --- GTM: conversion booking_submit ---
+      if (typeof window !== 'undefined') {
+        (window as any).dataLayer = (window as any).dataLayer || [];
+        (window as any).dataLayer.push({
+          event: 'booking_submit',
+          service: form.service || 'non spécifié',
+          date: form.date,
+          persons: Number(form.persons),
+        });
+      }
+
       setStatus('success');
       setForm({ name: '', phone: '', email: '', service: '', date: '', persons: 1, message: '' });
     } catch { setStatus('error'); }

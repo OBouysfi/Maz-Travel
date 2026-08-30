@@ -206,6 +206,19 @@ export default function BookingTabs() {
     });
 
   const search = () => {
+    // --- GTM: événement booking_start ---
+    if (typeof window !== 'undefined') {
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      (window as any).dataLayer.push({
+        event: 'booking_start',
+        booking_type: tab,               // 'TRANSFER' ou 'DISPOSITION'
+        from: form.pickupLocation || form.location,
+        to: form.dropLocation || '',
+        date: form.date,
+        pax: form.adults + form.children + form.babies,
+      });
+    }
+
     if (tab === 'TRANSFER') {
       const params = new URLSearchParams({
         from: form.pickupLocation,
@@ -216,7 +229,6 @@ export default function BookingTabs() {
         children: String(form.children),
         babies: String(form.babies),
       });
-
       router.push(`/${locale}/transferts?${params.toString()}`);
     } else {
       const params = new URLSearchParams({
@@ -229,7 +241,6 @@ export default function BookingTabs() {
         babies: String(form.babies),
         type: 'DISPOSITION',
       });
-
       router.push(`/${locale}/transferts?${params.toString()}`);
     }
   };

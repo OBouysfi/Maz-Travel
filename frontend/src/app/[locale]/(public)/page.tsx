@@ -1,6 +1,5 @@
 import Hero from '@/components/sections/Hero';
 import Services from '@/components/sections/Services';
-import Stats from '@/components/sections/Stats';
 import ExcursionsSection from '@/components/sections/ExcursionsSection';
 import Partners from '@/components/sections/Partners';
 import Testimonials from '@/components/sections/Testimonials';
@@ -13,7 +12,6 @@ export default function HomePage() {
     <>
       <Hero />
       <Services />
-      <Stats />
       <ExcursionsSection />
       <Partners />
       <Testimonials />
