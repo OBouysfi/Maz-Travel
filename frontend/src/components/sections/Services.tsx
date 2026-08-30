@@ -9,7 +9,7 @@ export default function Services() {
   const { currency } = useCurrencyStore();
 
   const items = [
-    { title: t('transfers'), desc: t('transfersDesc'), href: '/transferts', priceMad: 250, priceEur: 25, priceUsd: 28, accent: 'brand', popular: true },
+    { title: t('transfers'), desc: t('transfersDesc'), href: '/transferts', priceMad: 200, priceEur: 25, priceUsd: 28, accent: 'brand', popular: true },
     { title: t('excursions'), desc: t('excursionsDesc'), href: '/excursions', priceMad: 450, priceEur: 45, priceUsd: 49, accent: 'brand' },
     { title: t('activities'), desc: t('activitiesDesc'), href: '/activites', priceMad: 200, priceEur: 20, priceUsd: 22, accent: 'deep' },
     { title: t('disposition'), desc: t('dispositionDesc'), href: '/mise-a-disposition', priceMad: 800, priceEur: 80, priceUsd: 88, accent: 'dark' },
