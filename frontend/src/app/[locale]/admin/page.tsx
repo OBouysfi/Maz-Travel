@@ -27,7 +27,7 @@ export default function AdminLogin() {
     <div className="relative min-h-screen overflow-hidden">
       
       {/* Background Video */}
-      <video
+      {/* <video
         autoPlay
         loop
         muted
@@ -35,8 +35,8 @@ export default function AdminLogin() {
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
-      </video>
-
+      </video> */}
+      <img src="\images\hero.jpeg" alt="" className="absolute inset-0 w-full h-full object-cover" />
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
 

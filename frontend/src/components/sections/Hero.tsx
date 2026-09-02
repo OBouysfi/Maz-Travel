@@ -8,7 +8,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[760px] overflow-visible bg-ink-900">
-      <video
+      {/* <video
         className="absolute inset-0 w-full h-full object-cover overflow-hidden"
         autoPlay
         muted
@@ -21,8 +21,8 @@ export default function Hero() {
           type="video/mp4"
         />
         <source src="/videos/hero.mp4" type="video/mp4" />
-      </video>
-
+      </video> */}
+      <img src="\images\hero.jpeg" alt="" className="absolute inset-0 w-full h-full object-cover overflow-hidden" />     
       <div className="absolute inset-0 bg-gradient-to-b from-ink-900/55 via-ink-900/35 to-ink-900/85" />
 
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
