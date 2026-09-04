@@ -8,7 +8,7 @@ export default function ScrollReveal() {
   useEffect(() => {
     const check = () => {
       document.querySelectorAll('.reveal:not(.in)').forEach((el) => {
-        const rect = el.getBoundingClientRect();
+        const rect = el.getBoundingClientRect()
         if (rect.top < window.innerHeight - 50) {
           el.classList.add('in');
         }

@@ -121,7 +121,7 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
       >
         {/* Logo */}
         <div className={`flex items-center gap-3 px-4 py-5 border-b border-white/8 shrink-0 ${collapsed ? 'justify-center' : ''}`}>
-          <div className="w-9 h-9 shrink-0 rounded-xl overflow-hidden shadow-lg shadow-orange-500/30">
+          <div className="w-9 h-9 shrink-0 rounded-xl overflow-hidden">
             <img
               src="/images/maz_logo.png"
               alt="Maz Travel"
