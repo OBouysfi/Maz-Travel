@@ -17,8 +17,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-11 h-11 bg-gradient-to-br from-brand-500 to-brand-600 rounded-xl flex items-center justify-center shadow-lg shadow-brand-600/40">
-                <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6 text-white" stroke="currentColor" strokeWidth={2.5}><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+             <div className="w-16 h-16 shrink-0">
+                <img
+                  src="/images/maz_logo.png"
+                  alt="Maz Travel"
+                  className="w-full h-full object-contain"
+                />        
               </div>
               <div>
                 <div className="font-bold text-lg leading-none">Maz Travel</div>
